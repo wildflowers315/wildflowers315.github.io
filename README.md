@@ -2,3 +2,5 @@
 This is my personal website.
 
 My name is wildflowers315. Hello! Thank you for visiting.
+
+![](https://i.gifer.com/4j.gif)
