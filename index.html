@@ -184,7 +184,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li><p>&copy; wildflowers315 <span id="current-year"></span>. All rights reserved. Design: From <a href="https://html5up.net">HTML5 UP</a>.</p></li>
 					</ul>
 
 			</div>
@@ -197,6 +197,10 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Set the current year
+				document.getElementById('current-year').textContent = new Date().getFullYear();
+			</script>
 
 	</body>
 </html>
