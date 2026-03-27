@@ -29,7 +29,17 @@
 /* ── Base overrides ── */
 body {
   font-family: 'Inter', 'Source Sans Pro', sans-serif;
+  font-size: 13px;
   color: var(--text-dark);
+}
+
+#main p, #main li, #main .tl-desc {
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+#main section header h2 {
+  font-size: 1.5em;
 }
 
 /* ── Sidebar / Header ── */
@@ -39,22 +49,50 @@ body {
 
 #header .top #logo h1#title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4em;
+  font-size: 1.7em;
   letter-spacing: 0.02em;
   color: #fff;
+  text-align: center;
 }
 
 #header .top #logo p {
   color: var(--gold-light);
-  font-size: 0.82em;
+  font-size: 1em;
   font-weight: 400;
   letter-spacing: 0.05em;
+  text-align: center;
 }
 
-/* Avatar ring */
+#header nav ul li a {
+  font-size: 1em;
+}
+
+/* Logo — stack avatar above title, centered */
+#header .top #logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Avatar — no red background, responsive size */
+#header .top #logo .image.avatar48 {
+  width: clamp(60px, 8vw, 100px);
+  height: clamp(60px, 8vw, 100px);
+  background: transparent !important;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+  flex-shrink: 0;
+}
+
 #header .top #logo .image.avatar48 img {
+  width: 100%;
+  height: 100%;
   border: 3px solid var(--gold);
   border-radius: 50%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Nav links */
@@ -146,6 +184,20 @@ section#top header p {
   font-size: 1.1em;
   line-height: 1.8;
   margin-top: 0.8em;
+  text-align: left;
+}
+
+section#top header p a {
+  color: var(--gold-light);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200,164,90,0.4);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+section#top header p a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
 }
 
 section#top .button {
